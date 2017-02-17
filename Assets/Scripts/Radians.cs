@@ -2,6 +2,10 @@
 
 namespace Lateralus {
 
+    /// <summary>
+    /// Represents a rotation in radians
+    /// The implementation is monoidal meaning it represents a valid rotation as a number between 0 and 2π
+    /// </summary>
     public struct Radians : IComparable<Radians> {
 
         private const double FullCircle = 2 * Math.PI;
