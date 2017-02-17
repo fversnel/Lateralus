@@ -8,7 +8,7 @@ namespace Lateralus {
     /// </summary>
     public struct Radians : IComparable<Radians> {
 
-        private const double FullCircle = 2 * Math.PI;
+        private const double FullCircle = 2.0 * Math.PI;
 
         public readonly double Value;
 

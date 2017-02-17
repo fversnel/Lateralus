@@ -26,7 +26,6 @@ public class ComplexNumberTest : MonoBehaviour {
         var c5 = new ComplexNumber(1, -1);
         var c6 = new ComplexNumber(1, -1);
         Debug.Log(c5 + " * " + c6 + " = " + (c5 * c6));
-
 	}
 	
 	// Update is called once per frame

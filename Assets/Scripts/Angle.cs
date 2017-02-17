@@ -4,7 +4,7 @@ namespace Lateralus {
 
     /// <summary>
     /// Represents an angle in degrees.
-    /// The implementation is monoidal meaning it represents valid angles as numbers between 0 and 360
+    /// The implementation is monoidal meaning it represents valid angles as numbers between 0° and 360°
     /// </summary>
     public struct Angle : IComparable<Angle> {
 
