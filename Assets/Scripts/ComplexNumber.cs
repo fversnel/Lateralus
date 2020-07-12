@@ -31,9 +31,6 @@ namespace Lateralus {
         /// Secondly we multiply the length of both vectors to give the new complex
         /// number its appropriate size
         /// </summary>
-        /// <param name="c1"></param>
-        /// <param name="c2"></param>
-        /// <returns></returns>
         public static ComplexNumber operator *(ComplexNumber c1, ComplexNumber c2) {
             // i¹ = i = √-1
             // i² = -1
@@ -97,13 +94,16 @@ namespace Lateralus {
 
     public static class ComplexMath {
 
+        public static ComplexNumber AsComplexNumber(this Vector2 v) {
+            return new ComplexNumber(direct: v.x, lateral: v.y);
+        }
+
         public static Vector2 AsVector(this ComplexNumber c) {
             return new Vector2(x: (float)c.Direct, y: (float)c.Lateral.Value);
         }
 
         public static ComplexNumber Normalize(this ComplexNumber c) {
-            var v = c.AsVector().normalized;
-            return new ComplexNumber(v.x, v.y);
+            return c.AsVector().normalized.AsComplexNumber();
         }
 
 //        public static ComplexNumber ToComplexNumber(this Angle angle) {
